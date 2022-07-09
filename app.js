@@ -40,12 +40,14 @@ submitTask.addEventListener('click', function (e) {
 function emptyInput() {
   if ((task.value === '') || (dueDate.value === '') || (dueDate.value === NaN)) {
     redAlert.classList.add('d-block')
+    task.value = '';
+    dueDate.value = ''
 
-    const row = document.createElement('tr');
     setTimeout(() => {
       redAlert.classList.remove('d-block')
     }, 1000)
-    row.innerHTML = '';
+    row.innerHTML = ' ';
+
   }
 }
 
